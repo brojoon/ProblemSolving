@@ -7,8 +7,8 @@ int main() {
   while(t--) {
     scanf("%d %d", &a, &b);
     temp = a;
-    --b;
-    while(b--) {
+    b = b % 4 + 4;
+    for(int i = 2; i <= b; i++) {
       a = (a * temp) % 10;
       if (a == 0)
         a = 10;
