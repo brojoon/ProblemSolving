@@ -23,7 +23,6 @@ void bfs(void) {
                 && storage[ydy][xdx] == 0) {
                 storage[ydy][xdx] = storage[y][x] + 1;
                 q.push({ xdx, ydy });
-    
             }
         }
     }
