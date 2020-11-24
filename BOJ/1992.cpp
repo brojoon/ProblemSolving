@@ -18,9 +18,9 @@ void input() {
 }
 
 void div_conq(int x, int y, int size) {
-  flag = map[x][y];
-  for (int i = y; i < size; i++) {
-    for (int j = x; j < size; j++) {
+  flag = map[y][x];
+  for (int i = y; i < y + size && flag != 2; i++) {
+    for (int j = x; j < x + size; j++) {
       if (map[i][j] != flag) {
         flag = 2;
         break;
