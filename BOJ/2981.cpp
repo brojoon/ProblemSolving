@@ -6,8 +6,6 @@ using namespace std;
 
 int n, gcd;
 
-vector<int> v;
-
 int ft_gcd(int a, int b)
 {
   return a % b ? ft_gcd(b, a % b) : b;
@@ -16,15 +14,19 @@ int ft_gcd(int a, int b)
 int main()
 {
   cin >> n;
-  for (int i = 0; i < n; i++) {
+
+  vector<int> v(n);
+
+  for (int i = 0; i < n; i++)
+  {
     cin >> v[i];
   }
-  
+
   sort(v.begin(), v.end());
 
   gcd = v[1] - v[0];
 
-  for (int i = 1; i < n; i++)
+  for (int i = 2; i < n; i++)
   {
     gcd = ft_gcd(gcd, v[i] - v[i - 1]);
   }
@@ -36,8 +38,17 @@ int main()
     if (gcd % i == 0)
     {
       v.push_back(i);
+      if (gcd / i > i)
+      {
+        v.push_back(gcd / i);
+      }
     }
   }
+
+  v.push_back(gcd);
+
+  sort(v.begin(), v.end());
+
   for (int i = 0; i < v.size(); i++)
   {
     cout << v[i] << " ";
