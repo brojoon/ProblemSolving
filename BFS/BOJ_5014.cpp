@@ -1,6 +1,7 @@
 #include <iostream>
 #include <queue>
 #include <vector>
+#include <memory.h>
 
 #define ERROR  "use the stairs"
 
@@ -17,6 +18,7 @@ int main()
 	std::cin >> f >> s >> g >> u >> d;
 	// v.assign(f + 1, false);
 	q.push(std::make_pair(s, cnt));
+	memset(v, 0, 1000001);
 	v[s] = true;
 	while (!(q.empty()))
 	{
