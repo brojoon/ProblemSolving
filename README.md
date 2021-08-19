@@ -1,1 +1,1 @@
-# Problem Solving Training for computer science students.
+# Problem Solving Training for computer science students
