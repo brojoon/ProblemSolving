@@ -1,1 +1,1 @@
-# Problem Solving Training for computer science students
+# A Record of My Problem Solving Journey
