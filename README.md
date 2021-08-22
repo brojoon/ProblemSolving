@@ -1,1 +1,1 @@
-### 📒 A Record of My Problem Solving Journey
+# 📒 A Record of My Problem Solving Journey
