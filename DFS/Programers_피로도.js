@@ -1,6 +1,6 @@
 function solution(k, d) {
     const N = d.length;
-    const visited = new.Array(N).fill(0);
+    const visited = new Array(N).fill(0);
     let ans = 0;
 
     function dfs(k, cnt) {
